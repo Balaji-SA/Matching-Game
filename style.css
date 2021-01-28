@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: dodgerblue;
+}
+
+.game-board{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    padding: 10px;
+    margin: auto;
+    width: 800px;
+    height:500px;
+    
+}
+
+.container {
+    width: 120px;
+    height: 100px;
+    position: relative;
+    perspective: 800px;
+}
+.card {
+    width: 120px;
+    height: 100px;
+    position: absolute;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+.card div {
+    display: block;
+    height: 115px;
+    width: 115px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+.card .front {
+  background:goldenrod;
+}
+.card .back {
+    background:dodgerblue;
+    transform: rotateY( 180deg );
+}
+.card.flipped {
+    transform: rotateY( 180deg );
+}
+img{
+    position: relative;
+}
+
+#score{
+    position: absolute;
+}
+h3{
+    background-color: goldenrod;
+    padding: 10px;
+}
